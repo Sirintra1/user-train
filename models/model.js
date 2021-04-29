@@ -24,6 +24,10 @@ const model = new schema({
     price: {
         type: Number,
         required: 'Please fill model price.'
+    },
+    storage: {
+        type: String,
+        required: 'Please fill model storage'
     }
 });
 
