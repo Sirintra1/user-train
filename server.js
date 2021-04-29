@@ -3,6 +3,10 @@ const express = require('express');
 const cors = require('cors');
 require('./config/mongo-connector');
 require('./models/user');
+require('./models/brand');
+require('./models/model');
+require('./models/movie');
+require('./models/seat');
 
 const app = express();
 
