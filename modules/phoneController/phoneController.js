@@ -88,7 +88,8 @@ const phoneController = {
             image: req.body.image,
             color: req.body.color,
             stock: req.body.stock,
-            price: req.body.price
+            price: req.body.price,
+            storage : req.body.storage
         }
         Model.create(createObj).then(modelResp => {
             Brand.updateOne({ _id: req.body.brandId }, { $push: { models: modelResp } }, (err, ok) => {
@@ -123,7 +124,8 @@ const phoneController = {
             image: req.body.image,
             color: req.body.color,
             stock: req.body.stock,
-            price: req.body.price
+            price: req.body.price,
+            storage : req.body.storage
         }, (err, ok) => {
             if (err) {
                 res.status(500);
